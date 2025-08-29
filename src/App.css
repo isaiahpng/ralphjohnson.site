@@ -580,12 +580,12 @@ nav a.active::before {
 
   /* Social links on mobile: horizontal list of SVG icons closer to nav bar */
   .social-links {
-    margin-top: 0.2rem; /* Tighter margin under nav */
+    margin-top: -1rem; /* Tighter margin under nav */
     margin-bottom: 0.3rem; /* Minimize bottom space */
     display: flex;
     flex-direction: row; /* Horizontal layout */
     align-items: center; /* Center vertically */
-    gap: 1.5rem; /* Space for larger icons */
+    gap: .1rem; /* Space for larger icons */
     overflow: visible; /* Ensure icons aren't clipped */
   }
 
