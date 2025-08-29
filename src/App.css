@@ -186,7 +186,7 @@ nav a.active::before {
   display: flex;
   flex-direction: row; /* Horizontal layout */
   align-items: center; /* Center vertically */
-  gap: 1.8rem; /* Space for larger icons */
+  gap: .1rem; /* Space for larger icons */
   overflow: visible; /* Ensure icons aren't clipped */
 }
 
