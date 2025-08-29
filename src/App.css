@@ -413,28 +413,33 @@ nav a.active::before {
 @media (max-width: 600px) {
   .container {
     padding: 0.5rem; /* Reduce padding to save space */
-    padding-top: 1rem;
+    padding-top: 0.5rem; /* Minimize top padding */
     height: auto;
     overflow: auto; /* Allow scrolling for main content */
+    display: flex;
+    flex-direction: column; /* Maintain original order */
   }
 
   .sidebar {
     min-width: 100%;
     max-width: 100%;
-    margin-bottom: 1rem; /* Reduce vertical space */
-    padding: 0.5rem; /* Reduce padding */
+    margin-bottom: 0.5rem; /* Reduce vertical space */
+    padding: 0.3rem; /* Further reduce padding */
     display: flex;
     flex-direction: column;
     min-height: auto; /* Prevent overflow */
     height: auto; /* Allow natural height */
     overflow: visible; /* Prevent icon clipping */
+    flex: 0 0 auto; /* Limit sidebar growth */
   }
 
   .main-content {
     margin: 0;
-    padding: 0 1rem;
-    padding-top: 0; /* Remove top padding to show content */
-    min-height: auto; /* Allow content to flow */
+    padding: 0 0.5rem; /* Reduce padding to maximize space */
+    padding-top: 0; /* Remove top padding */
+    min-height: 0; /* Allow content to expand */
+    flex-grow: 1; /* Prioritize main content for majority of space */
+    overflow-y: auto; /* Ensure scrolling if needed */
   }
 
   /* Hide cursor-light on mobile */
@@ -467,24 +472,24 @@ nav a.active::before {
   }
 
   h1 {
-    font-size: 2rem; /* Smaller to reduce space */
+    font-size: 1.8rem; /* Smaller to reduce space */
     text-align: left;
-    padding-top: 0.5rem; /* Reduce padding */
+    padding-top: 0.3rem; /* Reduce padding */
   }
 
   h2 {
-    font-size: 0.8rem; /* Smaller to reduce space */
+    font-size: 0.7rem; /* Smaller to reduce space */
     text-align: left;
     padding-top: 0.2rem; /* Reduce padding */
   }
 
   p {
-    font-size: 0.8rem; /* Smaller to reduce space */
-    line-height: 1.4; /* Tighter line height */
+    font-size: 0.7rem; /* Smaller to reduce space */
+    line-height: 1.3; /* Tighter line height */
   }
 
   .bodyText {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-left: 0;
     text-align: justify;
   }
@@ -575,8 +580,8 @@ nav a.active::before {
 
   /* Social links on mobile: horizontal list of SVG icons closer to nav bar */
   .social-links {
-    margin-top: 0.3rem; /* Tighter margin under nav */
-    margin-bottom: 0.5rem; /* Minimize bottom space */
+    margin-top: 0.2rem; /* Tighter margin under nav */
+    margin-bottom: 0.3rem; /* Minimize bottom space */
     display: flex;
     flex-direction: row; /* Horizontal layout */
     align-items: center; /* Center vertically */

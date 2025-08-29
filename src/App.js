@@ -398,7 +398,7 @@ function App() {
                   <div className="projBlurb">
                     This was the very first website I designed and built back in 2021. While it's rough around the edges and
                     reflects the early stages of my journey, it's also a reminder of how far I've grown as a developer and
-                    designer since then.
+                    designer since then. Not optimized for mobile!
                   </div>
                 </p>
               </div>
