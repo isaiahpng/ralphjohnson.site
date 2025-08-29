@@ -1,3 +1,4 @@
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +29,7 @@ html {
   height: 100%;
   z-index: -1;
   display: flex;
-  overflow: hidden;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
 .cursor-light {
@@ -57,12 +58,17 @@ html {
   height: 100vh;
   box-sizing: border-box;
   padding-left: 6.5em;
+  overflow: auto; /* Ensure content is viewable */
 }
 
 .sidebar {
   flex: 0 0 25%;
   min-width: 420px;
   max-width: 300px;
+  display: flex; /* Enable flexbox for bottom positioning */
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100%; /* Ensure sidebar takes full height */
+  overflow: visible; /* Prevent icon clipping */
 }
 
 .main-content {
@@ -76,6 +82,7 @@ html {
   padding-top: 0.1em;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  position: relative; /* Ensure consistent positioning for IntersectionObserver */
 }
 
 section {
@@ -99,10 +106,8 @@ section {
 }
 
 strong:hover {
-  color: aquamarine;
-
+  color: #7FFFD4; /* Aquamarine for consistency */
 }
-
 
 h1 {
   font-family: 'Inter', sans-serif;
@@ -174,6 +179,36 @@ nav a.active::before {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+/* Social Links (Desktop) */
+.social-links {
+  margin-top: auto; /* Push to bottom of sidebar */
+  margin-bottom: 3rem; /* Raise icons higher */
+  display: flex;
+  flex-direction: row; /* Horizontal layout */
+  align-items: center; /* Center vertically */
+  gap: 1.8rem; /* Space for larger icons */
+  overflow: visible; /* Ensure icons aren't clipped */
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  width: 56px; /* Even bigger icon size for desktop */
+  height: 56px;
+  color: rgba(255, 255, 255, 0.55); /* Match nav link text color */
+  transition: color 0.3s ease, opacity 0.3s ease; /* Smooth hover transition */
+}
+
+.social-links a:hover {
+  color: #7FFFD4; /* Aquamarine highlight to match other highlights */
+  opacity: 0.7; /* Subtle hover effect */
+}
+
+.social-links .social-icon {
+  width: 56px;
+  height: 56px;
+}
+
 /* Content Box */
 .contentBox {
   border-radius: 8px;
@@ -182,10 +217,9 @@ nav a.active::before {
   margin: 0 0 1rem;
   box-sizing: border-box;
   display: flow-root;
-  /* New block formatting context */
 }
 
-.contentBox> :first-child {
+.contentBox > :first-child {
   padding-top: 0;
 }
 
@@ -197,7 +231,6 @@ nav a.active::before {
   background-color: transparent;
 }
 
-
 .Title {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
@@ -206,7 +239,6 @@ nav a.active::before {
   margin-bottom: 0.5rem;
   display: inline-flex;
   align-items: center;
-  white-space: nowrap;
   gap: 0.1rem;
 }
 
@@ -218,16 +250,27 @@ nav a.active::before {
   margin-bottom: 0.5rem;
   display: inline-flex;
   align-items: center;
-  white-space: nowrap;
   margin-left: -1.7em;
   gap: 0.1rem;
+}
+
+.projTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.1rem;
+  margin-top: -.25em;
 }
 
 /* Hover color change for text */
 .contentBox:hover .Title,
 .contentBox:hover .titlePresent,
 .contentBox:hover .projTitle {
-  color: aquamarine;
+  color: #7FFFD4; /* Aquamarine for consistency */
 }
 
 /* Arrow default state */
@@ -236,22 +279,19 @@ nav a.active::before {
   transform: scaleX(-1) translate(.8em, -.3em);
   transition: transform 0.3s ease, color 0.3s ease;
   display: inline-block;
-  /* Ensures transform is applied correctly */
   margin-left: 0.5em;
-  /* Adjust spacing from the title */
 }
 
 /* Arrow moves right on hover */
 .arrow:hover {
   transform: scaleX(-1) translate(-.1em, -.8em);
-  color: aquamarine;
+  color: #7FFFD4; /* Aquamarine for consistency */
 }
 
 .contentBox:hover .arrow {
   transform: scaleX(-1) translate(-.1em, -.8em);
-  color: aquamarine;
+  color: #7FFFD4; /* Aquamarine for consistency */
 }
-
 
 .expDate {
   font-size: 0.75rem;
@@ -267,19 +307,6 @@ nav a.active::before {
   line-height: 1.4;
   margin-top: -1rem;
   padding-left: 11.1rem;
-}
-
-.projTitle {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 0.5rem;
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap; 
-  gap: 0.1rem;
-  margin-top: -.25em;
 }
 
 .projBlurb {
@@ -326,9 +353,8 @@ nav a.active::before {
 }
 
 .projImage {
-  width: 8rem;  
+  width: 8rem;
   border-radius: 5px;
-
 }
 
 /* Easter Egg Video */
@@ -359,7 +385,7 @@ nav a.active::before {
   color: #FA9C1D;
 }
 
-/* Responsive Adjustments */
+/* Responsive Adjustments for Tablets and Below */
 @media (max-width: 1024px) {
   .container {
     flex-direction: column;
@@ -383,26 +409,197 @@ nav a.active::before {
   }
 }
 
+/* Mobile-Specific Adjustments */
 @media (max-width: 600px) {
+  .container {
+    padding: 0.5rem; /* Reduce padding to save space */
+    padding-top: 1rem;
+    height: auto;
+    overflow: auto; /* Allow scrolling for main content */
+  }
+
+  .sidebar {
+    min-width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem; /* Reduce vertical space */
+    padding: 0.5rem; /* Reduce padding */
+    display: flex;
+    flex-direction: column;
+    min-height: auto; /* Prevent overflow */
+    height: auto; /* Allow natural height */
+    overflow: visible; /* Prevent icon clipping */
+  }
+
+  .main-content {
+    margin: 0;
+    padding: 0 1rem;
+    padding-top: 0; /* Remove top padding to show content */
+    min-height: auto; /* Allow content to flow */
+  }
+
+  /* Hide cursor-light on mobile */
+  .cursor-light {
+    display: none;
+  }
+
+  /* Bouncing ball for mobile */
+  .bouncing-ball {
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    max-width: 300px;
+    max-height: 300px;
+    background: radial-gradient(circle, #155094e6 0%, rgba(255, 255, 255, 0.06) 40%, rgba(255, 255, 255, 0.02) 70%, rgba(255, 255, 255, 0.005) 90%, transparent 100%);
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 1000;
+    mix-blend-mode: screen;
+    filter: blur(80px);
+    animation: bounce 15s infinite ease-in-out;
+  }
+
+  @keyframes bounce {
+    0% { transform: translate(10%, 10%); }
+    25% { transform: translate(80%, 20%); }
+    50% { transform: translate(90%, 80%); }
+    75% { transform: translate(20%, 90%); }
+    100% { transform: translate(10%, 10%); }
+  }
+
+  h1 {
+    font-size: 2rem; /* Smaller to reduce space */
+    text-align: left;
+    padding-top: 0.5rem; /* Reduce padding */
+  }
+
+  h2 {
+    font-size: 0.8rem; /* Smaller to reduce space */
+    text-align: left;
+    padding-top: 0.2rem; /* Reduce padding */
+  }
+
+  p {
+    font-size: 0.8rem; /* Smaller to reduce space */
+    line-height: 1.4; /* Tighter line height */
+  }
+
+  .bodyText {
+    font-size: 0.8rem;
+    margin-left: 0;
+    text-align: justify;
+  }
+
+  .contentBox {
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .Title, .titlePresent, .projTitle {
+    font-size: 0.85rem;
+    justify-content: flex-start;
+    text-align: left;
+    margin-left: 0;
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  .expDate {
+    margin-right: 0;
+    text-align: center;
+    font-size: 0.7rem;
+  }
+
+  .expBlurb {
+    padding-left: 0;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    text-align: justify;
+  }
+
+  .projBlurb {
+    padding-left: 0;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    text-align: justify;
+  }
+
   .projImage-container {
     flex-direction: column;
-    display: flex;
     align-items: center;
-
+    margin-top: 0;
+    margin-bottom: 1.5rem;
   }
 
   .projImage {
     width: 100%;
-    max-width: 300px;
-    display: block;
+    max-width: 250px;
   }
 
-  .Title {
-    font-size: 0.9rem;
+  .tag-container {
+    padding-left: 0;
+    justify-content: center;
+    margin-top: 0.5rem;
   }
 
-  .expBlurb {
-    font-size: 0.85rem;
-    padding-left: 1rem;
+  .tag-button {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  nav a {
+    font-size: 0.65rem; /* Smaller to reduce vertical space */
+    justify-content: flex-start; /* Left-align nav links */
+    line-height: 0.8em; /* Tighter line height */
+    padding: 0.3rem 0; /* Reduce vertical space */
+  }
+
+  nav li {
+    margin-bottom: 0.2rem; /* Tighter spacing between nav items */
+  }
+
+  nav a::before {
+    width: 20px;
+    margin-right: 0.5rem;
+  }
+
+  nav a:hover::before,
+  nav a.active::before {
+    width: 40px;
+  }
+
+  .video-overlay {
+    width: 95%;
+    max-width: 400px;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Social links on mobile: horizontal list of SVG icons closer to nav bar */
+  .social-links {
+    margin-top: 0.3rem; /* Tighter margin under nav */
+    margin-bottom: 0.5rem; /* Minimize bottom space */
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    align-items: center; /* Center vertically */
+    gap: 1.5rem; /* Space for larger icons */
+    overflow: visible; /* Ensure icons aren't clipped */
+  }
+
+  .social-links a {
+    display: flex;
+    align-items: center;
+    width: 56px; /* Larger icons to match desktop */
+    height: 56px;
+    color: rgba(255, 255, 255, 0.55); /* Match nav link text color */
+    transition: color 0.3s ease, opacity 0.3s ease; /* Smooth hover/tap transition */
+  }
+
+  .social-links a:hover {
+    color: #7FFFD4; /* Aquamarine highlight */
+    opacity: 0.7; /* Subtle hover effect */
+  }
+
+  .social-links .social-icon {
+    width: 56px;
+    height: 56px;
   }
 }
