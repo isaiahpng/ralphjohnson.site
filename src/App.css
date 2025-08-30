@@ -30,6 +30,7 @@ html {
   z-index: -1;
   display: flex;
   overflow-x: hidden; /* Prevent horizontal scrollbar */
+  overflow-y: hidden; /* Prevent vertical scrollbar */
 }
 
 .cursor-light {
@@ -58,7 +59,7 @@ html {
   height: 100vh;
   box-sizing: border-box;
   padding-left: 6.5em;
-  overflow: auto; /* Ensure content is viewable */
+  overflow-y: hidden; /* Prevent vertical scrollbar */
 }
 
 .sidebar {
@@ -68,7 +69,8 @@ html {
   display: flex; /* Enable flexbox for bottom positioning */
   flex-direction: column; /* Stack children vertically */
   min-height: 100%; /* Ensure sidebar takes full height */
-  overflow: visible; /* Prevent icon clipping */
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+  overflow-y: hidden; /* Prevent vertical scrollbar */
 }
 
 .main-content {
