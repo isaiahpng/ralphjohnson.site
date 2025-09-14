@@ -484,11 +484,24 @@ function App() {
               </div>
             </a>
             <p className="bodyText" style={{ fontSize: ".9em", marginRight: "5rem", marginTop: "5em" }}>Loosely designed after Brittany C.'s Portfolio and coded in <strong>Visual Studio Code</strong> by yours truly. Built with <strong>Node.js</strong> and <strong>Tailwind CSS</strong>, deployed with <strong>Netlify</strong>. <br></br>All text is set in the <strong>Inter</strong> typeface.</p>
+            {/* Easter Egg GIF */}
+            <a
+              href="https://isaiahpng.netlify.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="easter-egg-gif-link"
+              title="wanna time travel?"
+              background="transparent"
+              
+            >
+              <img  src="/btfgif.gif" style={{ height: "6em" }} alt="Back to the Future GIF" className="easter-egg-gif" />
+            </a>
           </section>
-            
+
         </div>
       </div>
-      
+
+
     </div>
   );
 }
