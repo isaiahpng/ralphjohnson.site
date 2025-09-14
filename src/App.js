@@ -127,7 +127,7 @@ function App() {
       <div className="container">
         <div className="sidebar">
           <h1>Ralph Johnson</h1>
-          <h2>Web Developer & Media Designer</h2>
+          <h2>Web Developer & IT Specialist</h2>
           <p>I build digital experiences through web design, media production, and video editing.</p>
           <nav>
             <ul>
