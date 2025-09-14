@@ -211,7 +211,7 @@ function App() {
               technical work with communication and design.
               <br />
               <br />
-              I've worked in higher education, taught <strong>Python</strong> to hundreds of students, and helped faculty
+              I've worked MANY part-time positions in several industries. I've worked in higher education, taught <strong>Python</strong> to hundreds of students, and helped faculty
               with tools like MATLAB and Excel. I’ve also worked in <strong>IT support</strong>, managed Microsoft 365 admin
               environments and configured networks across Windows systems.
               <br />
@@ -234,7 +234,7 @@ function App() {
             <a href="https://www.bestbuy.com/" rel="noreferrer" target="_blank" style={{ textDecoration: 'none' }}>
               <div className="contentBox">
                 <p className="expInfo">
-                  <span className="expDate">2024 — PRESENT</span>
+                  <span className="expDate">2025 — PRESENT</span>
                   <span className="titlePresent">
                     Consultation Agent, Geek Squad &middot; Best Buy Co.
                     <svg
@@ -255,8 +255,9 @@ function App() {
                     </svg>
                   </span>
                   <div className="expBlurb">
-                    Diagnosed and resolved tech issues for 50+ clients daily, building fast, adaptable troubleshooting skills
-                    across hardware, software, and networks.
+                    Delivered on-call technical support to over 50 clients daily across various consumer
+                    electronics including PCs, laptops, tablets and smart home devices. <br></br><br></br>
+                    Received award for earning the highest agent ISP with the most tickets resolved in the 2nd Quarter of 2025.
                   </div>
                 </p>
                 <div className="tag-container">
@@ -265,12 +266,12 @@ function App() {
               </div>
             </a>
 
-            <a href="https://dot.egr.uh.edu/" rel="noreferrer" target="_blank" style={{ textDecoration: 'none' }}>
+            <a href="http://www.rsisystems-houston.com/" rel="noreferrer" target="_blank" style={{ textDecoration: 'none' }}>
               <div className="contentBox">
                 <p className="expInfo">
-                  <span className="expDate">2022 — 2025</span>
+                  <span className="expDate">2021 — 2025</span>
                   <span className="Title">
-                    Research Assistant &middot; University of Houston
+                    IT Support Specialist &middot; RSI Systems
                     <svg
                       width="1.9em"
                       height="1.8em"
@@ -289,14 +290,15 @@ function App() {
                     </svg>
                   </span>
                   <div className="expBlurb">
-                    Provided end-user support across software and technical platforms, with a focus on Excel, MATLAB, and
-                    digital learning tools. Streamlined digital classroom management through Canvas, supporting
-                    instructional delivery and technical continuity. Ensured reliable performance of lab systems by
-                    diagnosing and resolving connectivity, access, and hardware issues.
+                    Managed and maintained network hardware (e.g., patch panels, switches, cabling), and responded to network related disruptions within 15 minutes of ticket creation. <br></br><br></br>
+                    Utilized Zendesk Suite to manage support tickets and achieved a 95% resolution rate for remote network troubleshooting; Achieved an 87% resolution rate for general troubleshooting. <br></br><br></br>
+                    Deployed and configured workstations, peripherals, and network connections for new hires, supporting onboarding across 9 departments. <br></br><br></br>
+                    Implemented a more detailed troubleshooting documentation process and new FAQ page to internal company system that reduced repeat support tickets; FAQ page received ~200 visits per day post launch <br></br><br></br>
+
                   </div>
                 </p>
                 <div className="tag-container">
-                  <TagList tags={['MATLAB', 'RStudio', 'Excel', 'Canvas', 'BlackBoard']} />
+                  <TagList tags={['IT Support', 'Remote Support', 'Microsoft Suite', 'Network Troubleshooting' , 'Ticket Management']} />
                 </div>
               </div>
             </a>
@@ -309,9 +311,9 @@ function App() {
             >
               <div className="contentBox">
                 <p className="expInfo">
-                  <span className="expDate">2022 — 2024</span>
+                  <span className="expDate">2022 — 2025</span>
                   <span className="Title">
-                    Technical Instructor &middot; DesignYou! Code Camp
+                    Software Instructor &middot; DesignYou! Code Camp
                     <svg
                       width="1.9em"
                       height="1.8em"
@@ -330,14 +332,17 @@ function App() {
                     </svg>
                   </span>
                   <div className="expBlurb">
-                    Led instructional sessions in Python, JavaScript, and web development, delivering technical training in
-                    collaborative virtual environments using Microsoft Teams. Supported onboarding by configuring
-                    workstations and providing application and security training. Resolved AV and peripheral issues in
-                    real-time to maintain seamless live coding experiences.
+                    Taught React, JavaScript, HTML5/CSS3, and Python to 500+ students across three
+                    summers, fostering hands-on coding experience through real-world projects.<br></br><br></br>
+                    Designed instructional sessions and labs, simplifying complex programming concepts
+                    (e.g., SDLC, Scrum, OOP) for 6th – 8th graders.<br></br><br></br>
+                    Integrated GitHub, Visual Studio Code, and Microsoft Teams into the curriculum and
+                    managed up to 200 students per session
+
                   </div>
                 </p>
                 <div className="tag-container">
-                  <TagList tags={['Python', 'JavaScript', 'React', 'Microsoft Teams', 'Live Debugging']} />
+                  <TagList tags={['Python', 'JavaScript', 'React', 'HTML5/CSS3', 'Live Debugging']} />
                 </div>
               </div>
             </a>
@@ -492,9 +497,9 @@ function App() {
               className="easter-egg-gif-link"
               title="wanna time travel?"
               background="transparent"
-              
+
             >
-              <img  src="/btfgif.gif" style={{ height: "6em" }} alt="Back to the Future GIF" className="easter-egg-gif" />
+              <img src="/btfgif.gif" style={{ height: "6em" }} alt="Back to the Future GIF" className="easter-egg-gif" />
             </a>
           </section>
 
