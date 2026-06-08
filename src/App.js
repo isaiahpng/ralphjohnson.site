@@ -234,7 +234,7 @@ function App() {
             <a href="https://www.bestbuy.com/" rel="noreferrer" target="_blank" style={{ textDecoration: 'none' }}>
               <div className="contentBox">
                 <p className="expInfo">
-                  <span className="expDate">2025 — 2025{"   "}</span>
+                  <span className="expDate">2025 — 2025{"     "}</span>
                   <span className="titlePresent">
                     Consultation Agent, Geek Squad &middot; Best Buy Co.
                     <svg
