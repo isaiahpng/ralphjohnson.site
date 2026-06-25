@@ -488,7 +488,7 @@ function App() {
                 </p>
               </div>
             </a>
-            <p className="bodyText" style={{ fontSize: ".9em", marginRight: "5rem", marginTop: "5em" }}>Loosely designed after Brittany C.'s Portfolio and coded in <strong>Visual Studio Code</strong> by yours truly. Built with <strong>Node.js</strong> and <strong>Tailwind CSS</strong>, deployed with <strong>Netlify</strong>. <br></br>All text is set in the <strong>Inter</strong> typeface.</p>
+            <p className="bodyText" style={{ fontSize: ".9em", marginRight: "5rem", marginTop: "5em" }}>Loosely designed after Brittany C.'s Portfolio and coded in <strong>Visual Studio Code</strong> by yours truly. Built with <strong>React</strong> and <strong>Custom CSS</strong>, deployed with <strong>Netlify</strong>. <br></br>All text is set in the <strong>Inter</strong> typeface.</p>
             {/* Easter Egg GIF */}
             <a
               href="https://isaiahpng.netlify.app/"
